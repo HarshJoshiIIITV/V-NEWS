@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:newsapp/registered_team.dart';
-/*import 'package:vsporty/profile_page.dart';
-import 'package:vsporty/Registerevent_user.dart';
-import 'package:vsporty/profile_user.dart';
-import 'package:vsporty/user_itemscreen.dart';
-import 'avaliable_equipment.dart';
-import 'user_check_winner.dart';
-*/
+import 'package:newsapp/newstype_all.dart';
+import 'newstype_all.dart';
+import 'trendnews.dart';
+
 class Dashboard1 extends StatefulWidget {
   static const id = "userScreen";
   @override
@@ -34,26 +30,18 @@ class _Dashboard1State extends State<Dashboard1> {
               textColor: Colors.white,
               child: Text('News',style:TextStyle(fontWeight: FontWeight.bold),),
               onPressed: () {
-                Navigator.pushNamed(context, RegisteredTeamScreen.id);
+                Navigator.pushNamed(context, NewsScreen.id);
               },
             ),
             SizedBox(
               height: 15.0,
-            ),/*
-            RaisedButton(
-              color: Colors.black,
-              textColor: Colors.white,
-              child: Text('Issue Equipments'),
-              onPressed: () {
-                //Navigator.pushNamed(context, ItemScreen1.id);
-              },
-            ),*/
+            ),
             RaisedButton(
               color: Colors.indigo,
               textColor: Colors.white,
               child: Text('Trending News',style:TextStyle(fontWeight: FontWeight.bold),),
               onPressed: () {
-                //Navigator.pushNamed(context, CheckWinner1.id);
+                 Navigator.pushNamed(context, TrendScreen.id);
               },
             ),
           ],
@@ -63,15 +51,16 @@ class _Dashboard1State extends State<Dashboard1> {
         children: <Widget>[
           Expanded(
             child: RaisedButton(
-              child: Text('Dashboard'),
-            ),
+              child: Text('Dashboard',style: TextStyle(fontWeight:FontWeight.bold,color:Colors.white),),  
+              color:Colors.indigo,  
+          ),
           ),
           Expanded(
             child: RaisedButton(
-              child: Text('Profile'),
+              color:Colors.indigo ,
+              child: Text('LogOut',style: TextStyle(fontWeight:FontWeight.bold,color:Colors.white),),
               onPressed: () {
                 Navigator.pop(context);
-                //Navigator.pushNamed(context, ProfilePage1.id);
               },
             ),
           ),

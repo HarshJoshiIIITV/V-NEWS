@@ -29,20 +29,20 @@ class _SignUpScreenState extends State<SignUpScreen> {
             onChanged: (val) {
               _name = val;
             },
-            decoration: InputDecoration(hintText: 'Name'),
+            decoration: InputDecoration(hintText: 'Name',hintStyle: TextStyle(color: Colors.blueGrey[600]),),
           ),
           TextField(
             onChanged: (val) {
               _email = val;
             },
-            decoration: InputDecoration(hintText: 'Email'),
+            decoration: InputDecoration(hintText: 'Email',hintStyle: TextStyle(color: Colors.blueGrey[600]),),
           ),
           TextField(
             onChanged: (val) {
               _pass = val;
             },
             obscureText: true,
-            decoration: InputDecoration(hintText: 'Password'),
+            decoration: InputDecoration(hintText: 'Password',hintStyle: TextStyle(color: Colors.blueGrey[600]),),
           ),
           RaisedButton(
             child: Text('Sign Up',style:TextStyle(fontWeight:FontWeight.bold )),

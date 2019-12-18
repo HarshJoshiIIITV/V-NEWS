@@ -1,20 +1,11 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:newsapp/add_admin.dart';
-import 'package:newsapp/create_event.dart';
-import 'package:newsapp/registered_team.dart';
-import 'registered_team.dart';
-import 'Check_items.dart';
-/*
-import 'package:vsporty/checkwinner.dart';
+import 'package:newsapp/newstype.dart';
+import 'package:newsapp/newstype_all.dart';
+import 'removenews.dart';
+import 'trendnews.dart';
 
-import 'package:vsporty/profile_page.dart';
-import 'package:vsporty/register_event.dart';
-import 'package:vsporty/registered_team.dart';
-import 'avaliable_equipment.dart';
-
-
-*/
 class Dashboard extends StatefulWidget {
   static const id = 'dashboard';
   final FirebaseUser user;
@@ -45,7 +36,7 @@ class _DashboardState extends State<Dashboard> {
               child: Text('Add News',style:TextStyle(fontWeight:FontWeight.bold) ,),
               textColor: Colors.white,
               onPressed: () {
-                Navigator.pushNamed(context, CreateEvent.id);
+                Navigator.pushNamed(context, ItemScreen.id);
               },
             ),
             SizedBox(
@@ -69,7 +60,7 @@ class _DashboardState extends State<Dashboard> {
               color: Colors.indigo,
               textColor: Colors.white,
               onPressed: () {
-                Navigator.pushNamed(context, CheckItems.id);
+                Navigator.pushNamed(context, RemoveScreen.id);
               },
             ),
             SizedBox(
@@ -82,7 +73,7 @@ class _DashboardState extends State<Dashboard> {
               textColor: Colors.white,
               child: Text('News',style:TextStyle(fontWeight:FontWeight.bold) ,),
               onPressed: () {
-                Navigator.pushNamed(context, RegisteredTeamScreen.id);
+                Navigator.pushNamed(context, NewsScreen.id);
               },
             ),
              SizedBox(
@@ -95,35 +86,10 @@ class _DashboardState extends State<Dashboard> {
               textColor: Colors.white,
               child: Text('Trending News',style:TextStyle(fontWeight:FontWeight.bold) ,),
               onPressed: () {
-                //Navigator.pushNamed(context, RegisterScreen.id);
+                Navigator.pushNamed(context, TrendScreen.id);
               },
             ),
-            /*RaisedButton(
-              color: Colors.black,
-              textColor: Colors.white,
-              child: Text('Issue Equipments'),
-              onPressed: () {
-                //Navigator.pushNamed(context, ItemScreen.id);
-              },
-            ),
-            
-            RaisedButton(
-              color: Colors.black,
-              textColor: Colors.white,
-              child: Text('Registered Team'),
-              onPressed: () {
-                //Navigator.pushNamed(context, RegisteredTeamScreen.id);
-              },
-            ),
-           RaisedButton(
-              color: Colors.black,
-              textColor: Colors.white,
-              child: Text('Update Result'),
-              onPressed: () {
-                Navigator.pop(context);
-                //Navigator.pushNamed(context, CheckWinner.id);
-              },
-            ),*/
+           
           ],
         ),
       ),
@@ -131,15 +97,17 @@ class _DashboardState extends State<Dashboard> {
         children: <Widget>[
           Expanded(
             child: RaisedButton(
-              child: Text('Dashboard'),
+              
+              child: Text('Dashboard',style: TextStyle(fontWeight:FontWeight.bold,color:Colors.white),),
+              color:Colors.indigo,
             ),
           ),
           Expanded(
             child: RaisedButton(
-              child: Text('Profile'),
+              color:Colors.indigo ,
+              child: Text('LogOut',style: TextStyle(fontWeight:FontWeight.bold,color:Colors.white),),
               onPressed: () {
                 Navigator.pop(context);
-                //Navigator.pushNamed(context, ProfilePage.id);
               },
             ),
           ),

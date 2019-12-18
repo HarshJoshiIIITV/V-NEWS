@@ -28,14 +28,14 @@ class _LoginScreenState extends State<LoginScreen> {
             onChanged: (val) {
               _email = val;
             },
-            decoration: InputDecoration(hintText: 'Email'),
+            decoration: InputDecoration(hintText: 'Email' ,hintStyle: TextStyle(color: Colors.blueGrey[600]),),
           ),
           TextField(
             onChanged: (val) {
               _pass = val;
             },
             obscureText: true,
-            decoration: InputDecoration(hintText: 'Password'),
+            decoration: InputDecoration(hintText: 'Password',hintStyle: TextStyle(color: Colors.blueGrey[600]),),
           ),
           RaisedButton(
             color: Colors.indigo,
@@ -66,7 +66,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   );
                 }
-              } else {
+              } else if(_email!=null && _pass!=null) {
                 Navigator.pop(context);
                 Navigator.push(
                   context,

@@ -20,21 +20,21 @@ class AdminScreen extends StatelessWidget {
         children: <Widget>[
           TextField(
             keyboardType: TextInputType.text,
-            decoration: InputDecoration(hintText: 'Full Name'),
+            decoration: InputDecoration(hintText: 'Full Name',hintStyle: TextStyle(color: Colors.blueGrey[600]),),
             onChanged: (val) {
               _name = val;
             },
           ),
           TextField(
             keyboardType: TextInputType.emailAddress,
-            decoration: InputDecoration(hintText: 'Email'),
+            decoration: InputDecoration(hintText: 'Email',hintStyle: TextStyle(color: Colors.blueGrey[600]),),
             onChanged: (val) {
               _email = val;
             },
           ),
           TextField(
             obscureText: true,
-            decoration: InputDecoration(hintText: 'Password'),
+            decoration: InputDecoration(hintText: 'Password',hintStyle: TextStyle(color: Colors.blueGrey[600]),),
             onChanged: (val) {
               _pass = val;
             },
